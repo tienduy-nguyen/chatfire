@@ -1,60 +1,65 @@
-[debug] [2020-12-19T11:51:39.932Z] ----------------------------------------------------------------------
-[debug] [2020-12-19T11:51:39.934Z] Command:       /home/tienduy/.nvm/versions/node/v14.15.1/bin/node /usr/local/bin/firebase init functions
-[debug] [2020-12-19T11:51:39.934Z] CLI Version:   9.0.1
-[debug] [2020-12-19T11:51:39.935Z] Platform:      linux
-[debug] [2020-12-19T11:51:39.935Z] Node Version:  v14.15.1
-[debug] [2020-12-19T11:51:39.935Z] Time:          Sat Dec 19 2020 12:51:39 GMT+0100 (Central European Standard Time)
-[debug] [2020-12-19T11:51:39.935Z] ----------------------------------------------------------------------
-[debug] [2020-12-19T11:51:39.935Z] 
-[debug] [2020-12-19T11:51:39.939Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-12-19T11:51:39.940Z] > authorizing via signed-in user
-[info] 
-     ######## #### ########  ######## ########     ###     ######  ########
-     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
-     ######    ##  ########  ######   ########  #########  ######  ######
-     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
-     ##       #### ##     ## ######## ########  ##     ##  ######  ########
-
-You're about to initialize a Firebase project in this directory:
-
-  /mnt/workspace/01-Gits/01-JavaScript/REACT/chatfire
-
-Before we get started, keep in mind:
-
-  * You are currently outside your home directory
-  * You are initializing in an existing Firebase project directory
-
-[info] 
-=== Project Setup
-[info] 
-[info] First, let's associate this project directory with a Firebase project.
-[info] You can create multiple project aliases by running firebase use --add, 
-[info] but for now we'll just set up a default project.
-[info] 
-[info] i  .firebaserc already has a default project, using chatfire. 
-[debug] [2020-12-19T11:51:39.946Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-12-19T11:51:39.946Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-12-19T11:51:40.067Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Sat, 19 Dec 2020 11:51:40 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-12-19T11:51:40.073Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatfire  
+[debug] [2020-12-19T12:49:21.500Z] ----------------------------------------------------------------------
+[debug] [2020-12-19T12:49:21.502Z] Command:       /home/tienduy/.nvm/versions/node/v14.15.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-12-19T12:49:21.502Z] CLI Version:   9.0.1
+[debug] [2020-12-19T12:49:21.502Z] Platform:      linux
+[debug] [2020-12-19T12:49:21.502Z] Node Version:  v14.15.1
+[debug] [2020-12-19T12:49:21.502Z] Time:          Sat Dec 19 2020 13:49:21 GMT+0100 (Central European Standard Time)
+[debug] [2020-12-19T12:49:21.502Z] ----------------------------------------------------------------------
+[debug] [2020-12-19T12:49:21.503Z] 
+[debug] [2020-12-19T12:49:21.508Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-19T12:49:21.508Z] > authorizing via signed-in user
+[debug] [2020-12-19T12:49:21.508Z] [iam] checking project chatfire-c09ff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-12-19T12:49:21.511Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/chatfire-c09ff:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-12-19T12:49:22.227Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 19 Dec 2020 12:49:22 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=565","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-19T12:49:22.230Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatfire-c09ff  
  
-[debug] [2020-12-19T11:51:40.329Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sat, 19 Dec 2020 11:51:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-12-19T11:51:40.330Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
-[debug] [2020-12-19T11:51:40.333Z] HTTP Error: 403, The caller does not have permission
-[debug] [2020-12-19T11:51:40.392Z] FirebaseError: HTTP Error: 403, The caller does not have permission
-    at module.exports (/usr/local/share/.config/yarn/global/node_modules/firebase-tools/lib/responseToError.js:38:12)
-    at Request._callback (/usr/local/share/.config/yarn/global/node_modules/firebase-tools/lib/api.js:41:35)
-    at Request.self.callback (/usr/local/share/.config/yarn/global/node_modules/request/request.js:185:22)
-    at Request.emit (events.js:315:20)
-    at Request.EventEmitter.emit (domain.js:486:12)
-    at Request.<anonymous> (/usr/local/share/.config/yarn/global/node_modules/request/request.js:1154:10)
-    at Request.emit (events.js:315:20)
-    at Request.EventEmitter.emit (domain.js:486:12)
-    at IncomingMessage.<anonymous> (/usr/local/share/.config/yarn/global/node_modules/request/request.js:1076:12)
-    at Object.onceWrapper (events.js:421:28)
-    at IncomingMessage.emit (events.js:327:22)
-    at IncomingMessage.EventEmitter.emit (domain.js:486:12)
-    at endReadableNT (_stream_readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[error] 
-[error] Error: Failed to get Firebase project chatfire. Please make sure the project exists and your account has permission to access it.
+[debug] [2020-12-19T12:49:22.420Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 19 Dec 2020 12:49:22 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'chatfire-c09ff'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-12-19T12:49:22.428Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/chatfire-c09ff/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-12-19T12:49:23.552Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 19 Dec 2020 12:49:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[chatfire-c09ff]: beginning deploy... 
+[info] i  hosting[chatfire-c09ff]: found 19 files in build 
+[debug] [2020-12-19T12:49:23.564Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2020-12-19T12:49:23.998Z] > refreshing access token with scopes: []
+[debug] [2020-12-19T12:49:23.998Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-12-19T12:49:24.001Z] [hosting] hash cache [YnVpbGQ] stored for 19 files
+[debug] [2020-12-19T12:49:24.001Z] [hosting][hash queue][FINAL] {"max":427,"min":9,"avg":33.63157894736842,"active":0,"complete":19,"success":19,"errored":0,"retried":0,"total":19,"elapsed":436}
+[debug] [2020-12-19T12:49:24.080Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sat, 19 Dec 2020 12:49:24 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-19T12:49:24.086Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/chatfire-c09ff/versions/bf943423edf85732:populateFiles [none]
+[debug] [2020-12-19T12:49:24.087Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/chatfire-c09ff/versions/bf943423edf85732:populateFiles {"files":{"/404.html":"b7bab6b83fa074653ff28c8d2a64135d3434575f70a12ab3d3ba8080461b9537","/asset-manifest.json":"cff41d73e844063fcd43c1ba9e45052a9bf5b756d82c8bf19a4458b9332087c4","/favicon.ico":"c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06","/index.html":"3ea3a7f3e5de505f11badbf8bfeb149b83687c92dc74a0db945af8e96176b223","/manifest.json":"0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1","/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/logo192.png":"76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd","/static/css/main.aba53419.chunk.css":"883179be546bb11b78d93a2eb8987b4cbc628451db1971cc65f05e976d2bf4cb","/logo512.png":"7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205","/static/css/main.aba53419.chunk.css.map":"0ad35262a1505bd7410e55d1124b36b2a8681e3966747d87897d07f37fa71d69","/static/js/2.2cd8e866.chunk.js.LICENSE.txt":"d46f7135deff7c073cc0ceeb7e2ac22a70b51302fec16470119306628cbea74a","/static/js/3.dabe0e2a.chunk.js":"7a423e18b86d1e8b9eb07531a8c85955e344925afeb3375f450e3552467dc67c","/static/js/main.bc5aa8a4.chunk.js":"3898c35f22b9c2a79279a6f3d22345a354bf4c8f2a78a6826eb970d25027d00c","/static/js/3.dabe0e2a.chunk.js.map":"194772e818306276f0f465ca3345c8f921622eaca27c9afe645600e9af161872","/static/js/runtime-main.e3f3f5e5.js":"a8546425032ae1cfcfcdd863527b4e78d09ce5b9718dfc6852649e665d178933","/static/js/main.bc5aa8a4.chunk.js.map":"f98e1a87be6a61aa656b7a14241e060d093e631ec510889cd1471acbb01f6813","/static/js/runtime-main.e3f3f5e5.js.map":"f7528d5fd3f6edb7c1a24d9ace4d462a967fff15b5177a764f8a5bbad5bf6fac","/static/js/2.2cd8e866.chunk.js":"8e936f1032e735d75d88bbdd05b5331c97db3816e91510796e772a1fc610ebb9","/static/js/2.2cd8e866.chunk.js.map":"da2205f9569e44c5e1c4c0897bac8aa566660883946878a9ca4c6e1644329f0d"}}
+[debug] [2020-12-19T12:49:25.091Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/chatfire-c09ff/versions/bf943423edf85732:populateFiles 200
+[debug] [2020-12-19T12:49:25.092Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/chatfire-c09ff/versions/bf943423edf85732:populateFiles {"uploadRequiredHashes":["da2205f9569e44c5e1c4c0897bac8aa566660883946878a9ca4c6e1644329f0d","f98e1a87be6a61aa656b7a14241e060d093e631ec510889cd1471acbb01f6813","3ea3a7f3e5de505f11badbf8bfeb149b83687c92dc74a0db945af8e96176b223","7a423e18b86d1e8b9eb07531a8c85955e344925afeb3375f450e3552467dc67c","3898c35f22b9c2a79279a6f3d22345a354bf4c8f2a78a6826eb970d25027d00c","a8546425032ae1cfcfcdd863527b4e78d09ce5b9718dfc6852649e665d178933","8e936f1032e735d75d88bbdd05b5331c97db3816e91510796e772a1fc610ebb9","194772e818306276f0f465ca3345c8f921622eaca27c9afe645600e9af161872","cff41d73e844063fcd43c1ba9e45052a9bf5b756d82c8bf19a4458b9332087c4","f7528d5fd3f6edb7c1a24d9ace4d462a967fff15b5177a764f8a5bbad5bf6fac"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files"}
+[debug] [2020-12-19T12:49:25.097Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/da2205f9569e44c5e1c4c0897bac8aa566660883946878a9ca4c6e1644329f0d [none]
+[debug] [2020-12-19T12:49:25.097Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/da2205f9569e44c5e1c4c0897bac8aa566660883946878a9ca4c6e1644329f0d [stream]
+[debug] [2020-12-19T12:49:25.099Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/f98e1a87be6a61aa656b7a14241e060d093e631ec510889cd1471acbb01f6813 [none]
+[debug] [2020-12-19T12:49:25.099Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/f98e1a87be6a61aa656b7a14241e060d093e631ec510889cd1471acbb01f6813 [stream]
+[debug] [2020-12-19T12:49:25.100Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/3ea3a7f3e5de505f11badbf8bfeb149b83687c92dc74a0db945af8e96176b223 [none]
+[debug] [2020-12-19T12:49:25.100Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/3ea3a7f3e5de505f11badbf8bfeb149b83687c92dc74a0db945af8e96176b223 [stream]
+[debug] [2020-12-19T12:49:25.100Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/7a423e18b86d1e8b9eb07531a8c85955e344925afeb3375f450e3552467dc67c [none]
+[debug] [2020-12-19T12:49:25.100Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/7a423e18b86d1e8b9eb07531a8c85955e344925afeb3375f450e3552467dc67c [stream]
+[debug] [2020-12-19T12:49:25.101Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/3898c35f22b9c2a79279a6f3d22345a354bf4c8f2a78a6826eb970d25027d00c [none]
+[debug] [2020-12-19T12:49:25.101Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/3898c35f22b9c2a79279a6f3d22345a354bf4c8f2a78a6826eb970d25027d00c [stream]
+[debug] [2020-12-19T12:49:25.102Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/a8546425032ae1cfcfcdd863527b4e78d09ce5b9718dfc6852649e665d178933 [none]
+[debug] [2020-12-19T12:49:25.102Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/a8546425032ae1cfcfcdd863527b4e78d09ce5b9718dfc6852649e665d178933 [stream]
+[debug] [2020-12-19T12:49:25.103Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/8e936f1032e735d75d88bbdd05b5331c97db3816e91510796e772a1fc610ebb9 [none]
+[debug] [2020-12-19T12:49:25.103Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/8e936f1032e735d75d88bbdd05b5331c97db3816e91510796e772a1fc610ebb9 [stream]
+[debug] [2020-12-19T12:49:25.103Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/194772e818306276f0f465ca3345c8f921622eaca27c9afe645600e9af161872 [none]
+[debug] [2020-12-19T12:49:25.103Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/194772e818306276f0f465ca3345c8f921622eaca27c9afe645600e9af161872 [stream]
+[debug] [2020-12-19T12:49:25.104Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/cff41d73e844063fcd43c1ba9e45052a9bf5b756d82c8bf19a4458b9332087c4 [none]
+[debug] [2020-12-19T12:49:25.104Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/cff41d73e844063fcd43c1ba9e45052a9bf5b756d82c8bf19a4458b9332087c4 [stream]
+[debug] [2020-12-19T12:49:25.105Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/f7528d5fd3f6edb7c1a24d9ace4d462a967fff15b5177a764f8a5bbad5bf6fac [none]
+[debug] [2020-12-19T12:49:25.105Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/f7528d5fd3f6edb7c1a24d9ace4d462a967fff15b5177a764f8a5bbad5bf6fac [stream]
+[debug] [2020-12-19T12:49:25.106Z] [hosting][populate queue][FINAL] {"max":1100,"min":1100,"avg":1100,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1109}
+[debug] [2020-12-19T12:49:25.106Z] [hosting] uploads queued: 10
+[debug] [2020-12-19T12:49:26.421Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/7a423e18b86d1e8b9eb07531a8c85955e344925afeb3375f450e3552467dc67c 200
+[debug] [2020-12-19T12:49:26.422Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/7a423e18b86d1e8b9eb07531a8c85955e344925afeb3375f450e3552467dc67c [stream]
+[debug] [2020-12-19T12:49:26.424Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/f98e1a87be6a61aa656b7a14241e060d093e631ec510889cd1471acbb01f6813 200
+[debug] [2020-12-19T12:49:26.424Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/f98e1a87be6a61aa656b7a14241e060d093e631ec510889cd1471acbb01f6813 [stream]
+[debug] [2020-12-19T12:49:26.429Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/a8546425032ae1cfcfcdd863527b4e78d09ce5b9718dfc6852649e665d178933 200
+[debug] [2020-12-19T12:49:26.429Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatfire-c09ff/versions/bf943423edf85732/files/a8546425032ae1cfcfcdd863527b4e78d09ce5b9718dfc6852649e665d178933 [stream]
