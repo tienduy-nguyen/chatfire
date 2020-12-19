@@ -3,33 +3,26 @@ import './App.css';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
-import 'firebase/analytics';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 interface User {
   uid: string;
-  photoUrl?: string;
+  email: string;
+  displayName?: string;
+  emailVerified: boolean;
+  photoURL?: string;
 }
 interface Message {
   id: string;
   text?: string;
   uid: string;
-  photoUrl?: string;
+  photoURL?: string;
 }
 interface ChatMsgProps {
   message: Message;
 }
-console.log('env', process.env);
-
-console.log('apikey', process.env.REACT_APP_FIREBASE_API_KEY);
-console.log('domain', process.env.REACT_APP_FIREBASE_AUTH_DOMAINY);
-console.log('projectid', process.env.REACT_APP_FIREBASE_PROJECT_ID);
-console.log('storage', process.env.REACT_APP_FIREBASE_STORAGE_BUCKET);
-console.log('sender', process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID);
-console.log('app_id', process.env.REACT_APP_FIREBASE_APP_ID);
-console.log('measure', process.env.REACT_APP_FIREBASE_MEASUREMENT_ID);
 
 firebase.initializeApp({
   // firebase configure
@@ -44,7 +37,6 @@ firebase.initializeApp({
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
-const analytics = firebase.analytics();
 
 function App() {
   const [user] = useAuthState(auth);
@@ -90,19 +82,22 @@ function SignOut() {
 
 function ChatRoom() {
   const dummy = useRef<null | HTMLElement>(null);
-  const messageRef = firestore.collection('message');
+  const messageRef = firestore.collection('messages');
   const query = messageRef.orderBy('createAt').limit(100);
   const [messages] = useCollectionData<Message>(query, { idField: 'id' });
   const [formValue, setFormValue] = useState('');
 
   const sendMessage = async (e: any) => {
     e.preventDefault();
-    const { uid, photoUrl } = auth.currentUser as User;
+    let { uid, photoURL, displayName } = auth.currentUser as User;
+    if (!photoURL) {
+      photoURL = `https://eu.ui-avatars.com/api/?name=${displayName}`;
+    }
     await messageRef.add({
       text: formValue,
       createAt: firebase.firestore.FieldValue.serverTimestamp(),
       uid,
-      photoUrl,
+      photoURL,
     });
     setFormValue('');
     dummy.current?.scrollIntoView({ behavior: 'smooth' });
@@ -132,9 +127,19 @@ function ChatRoom() {
   );
 }
 
+function randomText(length: number) {
+  var result = '';
+  var characters =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var charactersLength = characters.length;
+  for (var i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
 function ChatMessage(props: ChatMsgProps) {
-  const { text, uid, photoUrl } = props.message;
-  const messageClass = uid == auth.currentUser?.uid ? 'sent' : 'received';
+  const { text, uid, photoURL } = props.message;
+  const messageClass = uid === auth.currentUser?.uid ? 'sent' : 'received';
 
   return (
     <>
@@ -142,7 +147,7 @@ function ChatMessage(props: ChatMsgProps) {
         <img
           alt='avatar'
           src={
-            photoUrl || 'https://api.adorable.io/avatars/23/abott@adorable.p'
+            photoURL || `https://eu.ui-avatars.com/api/?name=${randomText(2)}`
           }
         />
         <p>{text}</p>
