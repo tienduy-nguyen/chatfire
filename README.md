@@ -2,10 +2,17 @@
 
 Simple Chat app created with REACT & Firebase
 
+Demo online: [https://chatfire-c09ff.web.app/](https://chatfire-c09ff.web.app/)
+---
+
 <!-- vim-markdown-toc GFM -->
 
-* [Getting started](#getting-started)
-  * [Installation](#installation)
+- [Chatfire - Chatapp](#chatfire---chatapp)
+  - [Demo online: https://chatfire-c09ff.web.app/](#demo-online-httpschatfire-c09ffwebapp)
+  - [Getting started](#getting-started)
+    - [Installation](#installation)
+    - [Create project on firebase](#create-project-on-firebase)
+  - [Development](#development)
 
 <!-- vim-markdown-toc -->
 
@@ -22,4 +29,7 @@ Simple Chat app created with REACT & Firebase
   ```bash
   $ yarn add firebase react-firebase-hooks
   ```
-- Integrate firebase in `src/App.tsx`
+### Create project on firebase
+
+
+## Development
